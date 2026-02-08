@@ -17,14 +17,12 @@
             position: relative;
         }
 
-        button {
-            padding: 20px 40px;
-            font-size: 24px;
+        /* Новая кнопка-картинка */
+        #clickBtn {
+            width: 200px;       /* можно подкорректировать */
+            height: auto;
             cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            background: #ff4d6d;
-            color: white;
+            user-select: none;
         }
 
         .heart {
@@ -40,11 +38,11 @@
     </style>
 </head>
 <body>
-    <button id="clickBtn">Кликни рядом!</button>
+    <!-- Кнопка теперь картинка -->
+    <img id="clickBtn" src="button.png" alt="Кнопка">
 
     <audio id="heartSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3"></audio>
 
     <script src="game.js"></script>
 </body>
 </html>
-
