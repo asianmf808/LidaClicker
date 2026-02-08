@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <title>Smooth Game</title>
+    <meta charset="UTF-8">
+    <title>Сердечный кликер</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background: #ff4d6d;
+            color: white;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            animation: floatUp 1s forwards;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
+    <button id="clickBtn">Кликни рядом!</button>
 
-<h1>Game will be here</h1>
+    <audio id="heartSound" src="https://www.soundjay.com/buttons/sounds/button-09.mp3"></audio>
 
+    <script src="game.js"></script>
 </body>
 </html>
+
